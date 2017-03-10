@@ -1,0 +1,14 @@
+﻿.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #dff0d8; 
+   border-color: #d6e9c6; 
+ }
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #d0e9c6;
+  border-color: #c9e2b3; 
+}
+
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+    background-color: #d0e9c6;
+}
