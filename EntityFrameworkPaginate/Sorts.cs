@@ -30,7 +30,7 @@ namespace EntityFrameworkPaginate
         {
             Append(condition, expression, byDescending);
         }
-        
+
         private void Append<TKey>(bool condition, Expression<Func<T, TKey>> expression, bool byDescending = false)
         {
             _sortList.Add(new Sort<T, TKey>
@@ -51,104 +51,7 @@ namespace EntityFrameworkPaginate
             return _sortList.First(s => s.Condition);
         }
 
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, bool> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, byte> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, char> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, decimal> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, double> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, float> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, int> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, long> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, sbyte> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, short> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, uint> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, ulong> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, ushort> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, string> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, DateTime> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, TimeSpan> sort)
-        {
-            return sort.ByDescending
-                ? query.OrderByDescending(sort.Expression)
-                : query.OrderBy(sort.Expression);
-        }
-        internal static IQueryable<T> ApplySort(IQueryable<T> query, Sort<T, Guid> sort)
+        internal static IQueryable<T> ApplySort<TKey>(IQueryable<T> query, Sort<T, TKey> sort)
         {
             return sort.ByDescending
                 ? query.OrderByDescending(sort.Expression)
