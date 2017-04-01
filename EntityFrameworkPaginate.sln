@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPaginate.Exa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkPaginate.Example.Tests", "EntityFrameworkPaginate.Example.Tests\EntityFrameworkPaginate.Example.Tests.csproj", "{5DEF24D2-33D7-4368-82F1-BA06AD6B774B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfiniteScroll", "InfiniteScroll\InfiniteScroll.csproj", "{D775C9D0-7DCE-4324-BD8D-B702DFCF5B5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5DEF24D2-33D7-4368-82F1-BA06AD6B774B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DEF24D2-33D7-4368-82F1-BA06AD6B774B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DEF24D2-33D7-4368-82F1-BA06AD6B774B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D775C9D0-7DCE-4324-BD8D-B702DFCF5B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D775C9D0-7DCE-4324-BD8D-B702DFCF5B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D775C9D0-7DCE-4324-BD8D-B702DFCF5B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D775C9D0-7DCE-4324-BD8D-B702DFCF5B5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
