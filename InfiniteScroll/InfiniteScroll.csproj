@@ -60,6 +60,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -111,7 +113,24 @@
     <Content Include="Content\mdl-v1.1.2\material.min.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\TrekCardTemplate.html" />
+    <Content Include="Dal\PlacesEntity.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PlacesEntity.edmx</DependentUpon>
+      <LastGenOutput>PlacesEntity.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Dal\PlacesEntity.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PlacesEntity.edmx</DependentUpon>
+      <LastGenOutput>PlacesEntity.cs</LastGenOutput>
+    </Content>
     <Content Include="Global.asax" />
+    <EntityDeploy Include="Dal\PlacesEntity.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PlacesEntity.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Dal\PlacesEntity.edmx.diagram">
+      <DependentUpon>PlacesEntity.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -124,6 +143,25 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\JqueryExampleController.cs" />
+    <Compile Include="Dal\PlacesDal.cs" />
+    <Compile Include="Dal\PlacesEntity.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlacesEntity.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dal\PlacesEntity.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlacesEntity.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dal\PlacesEntity.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlacesEntity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Dal\Trek.cs">
+      <DependentUpon>PlacesEntity.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -150,6 +188,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
