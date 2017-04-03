@@ -8,10 +8,89 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link href="~/Content/mdl-v1.1.2/material.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Trek World</title>
 </head>
 <body>
-    <div> 
+    <div class="mdl-layout mdl-js-layout">
+        <div class="demo-layout-transparent">
+            <header class="mdl-layout__header mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">Trek The World</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation -->
+                    <nav class="mdl-navigation">
+                        <a class="mdl-navigation__link" href="">India</a>
+                        <a class="mdl-navigation__link" href="">Canada</a>
+                        <a class="mdl-navigation__link" href="">USA</a>
+                        <a class="mdl-navigation__link" href="">ALL</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Trek The World</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="">India</a>
+                    <a class="mdl-navigation__link" href="">Canada</a>
+                    <a class="mdl-navigation__link" href="">USA</a>
+                    <a class="mdl-navigation__link" href="">ALL</a>
+                </nav>
+            </div>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--2-col">
+                    <h4>Search By Country</h4>
+                    <ul class="demo-list-icon mdl-list">
+                        <li class="mdl-list__item">
+                            <a class="mdl-list__item-primary-content" href="">
+                                <img class="material-icons mdl-list__item-icon" src="~/Assets/Ind.png" />
+                                India
+                            </a>
+                        </li>
+                        <li class="mdl-list__item">
+                            <a class="mdl-list__item-primary-content" href="">
+                                <img class="material-icons mdl-list__item-icon" src="~/Assets/Can.png" />
+                                Canada
+                            </a>
+                        </li>
+                        <li class="mdl-list__item">
+                            <a class="mdl-list__item-primary-content" href="">
+                                <img class="material-icons mdl-list__item-icon" src="~/Assets/USA.png" />
+                                USA
+                            </a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <h4>Diffuculty</h4>
+                    <!-- Primary-colored flat button -->
+                    <button class="mdl-button mdl-js-button mdl-button--primary">
+                        Low to High
+                    </button>
+                    <br />
+                    <!-- Accent-colored flat button -->
+                    <button class="mdl-button mdl-js-button mdl-button--accent">
+                        High to Low
+                    </button>
+                </div>
+                <div class="mdl-cell mdl-cell--2-col"></div>
+                <div class="mdl-cell mdl-cell--8-col">
+                    <div id="trekDataDiv"></div>
+                    <!-- MDL Progress Bar with Indeterminate Progress -->
+                    <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+                    @*<div class="mdl-spinner mdl-js-spinner is-active"></div>*@
+                </div>
+            </div>
+        </main>
     </div>
+
 </body>
 </html>
+<script src="~/Content/mdl-v1.1.2/material.min.js"></script>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+<script src="~/Scripts/mustache.js"></script>
+<script src="~/Scripts/JqueryExample.js"></script>
