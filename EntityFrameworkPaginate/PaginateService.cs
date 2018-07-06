@@ -64,8 +64,7 @@ namespace EntityFrameworkPaginate
         private static IQueryable<T> ApplySort<T>(this IQueryable<T> query, Sorts<T> sorts)
         {
             if (!sorts.IsValid()) return query;
-            var sort = sorts.Get();
-            return Sorts<T>.ApplySort(query, sort);
+            return Sorts<T>.ApplySorts(query, sorts);
         }
     }
 }

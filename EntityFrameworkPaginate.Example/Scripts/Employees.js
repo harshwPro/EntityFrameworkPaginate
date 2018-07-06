@@ -48,7 +48,7 @@ $(document).ready(function () {
                 var searchText = my.employeesVm.vm.searchText();
                 var sortBy = my.employeesVm.vm.sortBy();
                 var jobTitle = my.employeesVm.vm.jobTitle();
-                var method = "GetFilteredPaged?pageSize=" + pageSize + "&currentPage=" + currentPage
+                var method = "Employees/GetFilteredPaged?pageSize=" + pageSize + "&currentPage=" + currentPage
                     + "&searchText=" + searchText + "&sortBy=" + sortBy + "&jobTitle=" + jobTitle;
                 my.ajaxGetJson(method, null, my.employeesVm.getEmployeesCallback);
             };

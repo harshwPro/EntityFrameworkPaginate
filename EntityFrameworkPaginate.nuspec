@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>EntityFrameworkPaginate</id>
-    <version>1.0.0</version>
+    <version>1.2.0</version>
     <authors>Harsh Wardhan</authors>
     <owners>Harsh Wardhan</owners>
     <licenseUrl>https://github.com/harshwPro/EntityFrameworkPaginate/blob/master/License.txt</licenseUrl>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>One stop solution for entity framework pagination, sorting and filtering.</description>
     <releaseNotes></releaseNotes>
-    <copyright>Copyright 2017</copyright>
+    <copyright>Copyright 2018</copyright>
     <tags>EntityFrameworkPaginate EntityFramework Paginate Sorting Filtering</tags>
     <dependencies>
     </dependencies>
