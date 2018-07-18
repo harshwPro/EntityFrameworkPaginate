@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Data.Entity;
 
 namespace EntityFrameworkPaginate
 {
@@ -16,12 +17,14 @@ namespace EntityFrameworkPaginate
         /// <returns>A Page object with filtered data for the given page number and page size.</returns>
         public static Page<T> Paginate<T>(this IQueryable<T> query, int pageNumber, int pageSize)
         {
+            var pageSkip = (pageNumber - 1) * pageSize;
+
             var result = new Page<T>
             {
                 CurrentPage = pageNumber,
                 PageSize = pageSize,
                 RecordCount = query.Count(),
-                Results = query.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList()
+                Results = query.Skip(() => pageSkip).Take(() => pageSize).ToList()
             };
             result.PageCount = (int)Math.Ceiling((double)result.RecordCount / pageSize);
             return result;
